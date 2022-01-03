@@ -124,8 +124,8 @@
 
 **安装**
 
-安装视频教程：https://b23.tv/4ZdXS8c
-视频对应的sign文件夹在代码安装包里
+最新安装视频教程：https://b23.tv/4ZdXS8c
+视频对应的sign文件夹在视频评论区域
  
 ### 鸣谢
 https://github.com/zhlynn/zsign
