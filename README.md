@@ -124,51 +124,9 @@
 
 **安装**
 
- 1. 解压发布包,修改sign/public/js/app.63d3a6a1.js 搜索a.defaults.baseURL 修改成你的域名
-
- 2. 修改application-sign.xml 的domain为你的域名,key-password为你的ssl证书密码 其他选项请自行根据注释修改
-
- 3. 修改你的jks文件名,改名为cert.jks,并复制到sign/mode目录下
-
- 4. 将sign目录复制到根目录 application-sign.yml 和jar包复制到/opt目录
-
- 5. 下面请执行以下命令
-
-    - systemctl stop firewalld.service
-
-    - systemctl disable firewalld.service
-
-    - yum update -y  && chmod -R 777 /sign && yum install docker -y && systemctl start docker
-
-    - docker run -v /opt:/opt  -v /var/lib/mysql/:/var/lib/mysql/  -v /sign:/sign -p 80:80 -p 3306:3306 -p 443:443 -tdi --privileged    --name sign -d  --restart always 2524931333/centos7xjm:expect  init -t (这里使用的是阿里云docker镜像需要先登录 具体怎么登录请百度)
-    - docker exec -it sign /bin/bash
-    - sh /root/mysqlinit.sh
-    - systemctl start mysqld
-    - mysql -uroot -pMysql666..
-    - create database ios_super_sign;
-    - use ios_super_sign;
-    - set names utf8mb4;
-    - source /sign/mode/ios_super_sign.sql;
-    - insert into user() values(null,super,super,now(),1,0);
-    - quit;
-    - screen -S sign
-    - cd  /opt
-    - java -jar -Djava.security.egd=file:/dev/./urandom ios-super-sign-0.0.1-SNAPSHOT.jar
-    - 启动后请按两次ctrl+a+d 退出screen和退出docker
-
-    
-
-启动后访问域名即可管理员账号密码均为super
-
-### 说明
-
----
-
-本项目前后端一体,所以没有好看的ui,有需要的可以自行克隆二开,开源不易如果对你有帮助的话请点个start吧！
-
-前端地址:https://github.com/xujimu/ios_super_sign_vue
-搭建视频: https://cloud.189.cn/t/qmQB7fvaYba2 (访问码:rqo8)
-
+安装视频教程：https://b23.tv/4ZdXS8c
+视频对应的sign文件夹在代码安装包里
+ 
 ### 鸣谢
 https://github.com/zhlynn/zsign
 
