@@ -2,6 +2,8 @@
 
 ###### 超级签名 免签封装 安卓打包 企业签名 自助分发多合一系统
 
+部署教程 https://github.com/xujimu/ios_super_sign_docker
+
 ### 主要功能
 
 1. 基本操作
